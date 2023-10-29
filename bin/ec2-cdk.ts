@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import {Ec2CdkStack } from '../lib/ec2-cdk-stack';
+import { Ec2CdkStack } from '../lib/ec2-cdk-stack';
 
 const app = new cdk.App();
 new Ec2CdkStack(app, 'Ec2CdkStack', {
+  env: { account: '414921231167', region: 'us-east-1' },
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
@@ -13,8 +14,8 @@ new Ec2CdkStack(app, 'Ec2CdkStack', {
    * and Region that are implied by the current CLI configuration. */
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
 
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
+  /* Uncomment the next line if you k
+  
   env: { account: '414921231167', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */

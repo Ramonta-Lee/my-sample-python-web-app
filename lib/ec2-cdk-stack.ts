@@ -14,7 +14,8 @@ import { SecretValue } from 'aws-cdk-lib';
 
 
 
-export class PythonEc2BlogpostStack extends cdk.Stack {
+export class PythonEc2Blog extends cdk.Stack {
+  
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -37,7 +38,7 @@ export class PythonEc2BlogpostStack extends cdk.Stack {
     
     // VPC
     //This VPC has 3 public subnets, and that's it
-    const vpc = new Vpc(this, 'main_vpc',{subnetConfiguration:
+    const vpc = new Vpc(this, 'man_vpc',{subnetConfiguration:
     [
       {
         cidrMask: 24,
