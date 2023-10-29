@@ -12,7 +12,7 @@ import { ServerDeploymentGroup, ServerApplication, InstanceTagSet } from 'aws-cd
 import { SecretValue } from 'aws-cdk-lib';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
-export class PythonEc2BlogpostStack extends cdk.Stack {
+export class PythonEc2Blog extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
